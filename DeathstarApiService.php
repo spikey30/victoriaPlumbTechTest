@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: owner
- * Date: 11/02/2020
- * Time: 17:25
- */
 
 class DeathstarApiService
 {
@@ -15,7 +9,7 @@ class DeathstarApiService
     public function __construct()
     {
         $this->curlClient = curl_init();
-        curl_setopt($this->curlClient,CURLOPT_RETURNTRANSFER,1);
+        curl_setopt($this->curlClient, CURLOPT_RETURNTRANSFER, 1);
     }
 
 
