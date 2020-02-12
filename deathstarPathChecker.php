@@ -3,7 +3,7 @@
 require_once 'DeathstarApiService.php';
 
 
-$deathStarApiService = new DeathstarApiService();
+$deathStarApiService = new App\DeathstarApiService();
 
 $statusCode = '';
 $path = 'f';
