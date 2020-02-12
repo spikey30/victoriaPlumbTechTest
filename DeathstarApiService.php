@@ -35,4 +35,28 @@ class DeathstarApiService
         $url = $this->baseUrl . '?path=' . $path . '&name=test';
         return $url;
     }
+
+    public function getDirection($crashPosition, $lastLineOfMap)
+    {
+        $inc = 0;
+        $direction = '';
+
+        // split map last line into characters
+        $explodedLastline = str_split($lastLineOfMap);
+        while (true) {
+            $inc++;
+
+            if ($explodedLastline[$crashPosition -$inc] != '#') {
+                $direction = 'l';
+                break;
+            }
+
+            if ($explodedLastline[$crashPosition +$inc] != '#') {
+                $direction = 'r';
+                break;
+            }
+        }
+
+        return $direction;
+    }
 }
