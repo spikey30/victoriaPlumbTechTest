@@ -14,14 +14,14 @@ Project rational
 For this project I first started off by reading the requirements
 I understood that I would need to call an api repeatedly in order
 to decipher a path forward, due to this I found it best to have a service class 
-that could be called to make request to the api and format the response, as well as
+that could be called to make requests to the api and format the response, as well as
 Have functions for repeated logic.
 
 I quickly discovered that I could keep going forward on the map until I hit a wall,
 then i would be able to check for a path through.
 
-Intially I tried to do this through excursion by getting the collision coordinates horizontal position
-checking If the next line was either side if this co ordinate there was a space to got through if not check the next
+Intially I tried to do this through recursion by getting the collision coordinates horizontal position then
+checking If co ordinate either side of the collision had a space to go through if not check the next
 position  after that and so on.
 
 This would have worked but would only allow me to check one side of the coordinates ie to the left.
